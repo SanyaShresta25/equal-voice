@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'GroovenShine';
+  src: url('/src/assets/fonts/GroovenShine.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hollow-text {
+  color: transparent;
+  -webkit-text-stroke: 2.5px #ec4899;
+  font-weight: bold;
+}
+
+/* Gooey effect container */
+.goopy-text {
+  filter: url('#gooey');
+  animation: dripMove 4s infinite ease-in-out alternate;
+}
+
+/* Subtle dripping animation */
+@keyframes dripMove {
+  0% {
+    transform: scale(3) translateY(0px) skewX(0deg);
+  }
+  50% {
+    transform: scale(3.00) translateY(3px) skewX(1deg);
+  }
+  100% {
+    transform: scale(2.95) translateY(-2px) skewX(-1deg);
+  }
+}

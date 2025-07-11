@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+spacy
+nltk
+vaderSentiment
+gender-guesser
