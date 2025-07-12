@@ -21,10 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Root route to keep Render warm
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {"status": "EqualVoice API is live"}
+
 
 @app.post("/analyze", response_model=AnalysisResponse)
 def analyze(request: TextRequest):
