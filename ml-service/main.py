@@ -10,12 +10,13 @@ nltk.download('punkt')
 
 app = FastAPI()
 
-# ✅ CORS setup for deployed frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://equal-voice-sanya.vercel.app"
+        "https://equal-voice-sanya.vercel.app",
+        "http://localhost:5173"
     ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
