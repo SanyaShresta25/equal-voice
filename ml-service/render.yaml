@@ -2,7 +2,10 @@ services:
   - type: web
     name: equalvoice-api
     env: python
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    buildCommand: pip install -r requirements.txt && python nltk_setup.py
+
+    startCommand: python nltk_setup.py && uvicorn main:app --host 0.0.0.0 --port 10000
+
     plan: free
     envVars:
       - key: PORT
