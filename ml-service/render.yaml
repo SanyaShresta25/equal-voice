@@ -2,7 +2,7 @@ services:
   - type: web
     name: equalvoice-api
     env: python
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn ml-service.main:app --host 0.0.0.0 --port 10000
     plan: free
     envVars:
       - key: PORT
