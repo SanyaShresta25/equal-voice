@@ -55,7 +55,19 @@
 </div>
 
 ---
+## 📸 Screenshots
 
+<p align="center">
+  <img src="./landing.png" alt="Landing Page" height="250" />
+  <img src="./output.png" alt="Output Analysis" height="250" />
+</p>
+
+<p align="center">
+  <img src="./contact.png" alt="Contact Section" height="250" />
+  <img src="./login.png" alt="Login Screen" height="250" />
+</p>
+
+---
 
 ## 🔍 Core Features
 
