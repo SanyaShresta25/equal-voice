@@ -1,3 +1,4 @@
+print("🔥 FastAPI backend is LIVE and using latest CORS settings")
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from schema import TextRequest, AnalysisResponse
