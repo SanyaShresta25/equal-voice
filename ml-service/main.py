@@ -26,9 +26,14 @@ app.add_middleware(
 def root():
     return {"status": "EqualVoice API is live"}
 
-# ✅ Analysis route
 @app.post("/analyze", response_model=AnalysisResponse)
 def analyze(request: TextRequest):
-    result = analyze_text(request.text)
-    result["inputText"] = request.text
-    return result
+    print("🔍 Received text:", request.text)
+    try:
+        result = analyze_text(request.text)
+        result["inputText"] = request.text
+        print("✅ Analysis result:", result)
+        return result
+    except Exception as e:
+        print("❌ ERROR in analysis:", str(e))
+        return {"error": str(e)}
