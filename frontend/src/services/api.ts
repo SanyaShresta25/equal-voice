@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/analyze";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export const analyzeText = async (text: string) => {
   const response = await fetch(`${BASE_URL}/analyze`, {
